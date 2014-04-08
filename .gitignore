@@ -1,2 +1,4 @@
 resources/js/out
 .sass-cache
+*.sublime-project
+*.sublime-workspace
