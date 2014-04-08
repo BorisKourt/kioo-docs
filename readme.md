@@ -1,12 +1,12 @@
-# Kioo Documentation
+# Kioo Documentation Site
 
-FIXME: write description
+Currently this being build off of the OM version of the Kioo example. 
 
 ## Contributing
 
 Bootstrap SCSS: `sass --watch src/scss/site.scss:resources/css/site.css`
 
-CLJS: lein cljsbuild auto
+CLJS: `lein cljsbuild auto`
 
 ## License
 
