@@ -3,11 +3,11 @@
   :url "tba"
   
   :dependencies [[org.clojure/clojure "1.6.0"]
-                 [org.clojure/clojurescript "0.0-2202"]
-                 [kioo "0.3.0"]
-                 [om "0.5.3"]
-                 [org.clojure/core.async "0.1.278.0-76b25b-alpha"]
-                 [secretary "1.1.0"]]
+                 [org.clojure/clojurescript "0.0-2234"]
+                 [kioo "0.4.1-SNAPSHOT"]
+                 [om "0.6.4"]
+                 [org.clojure/core.async "0.1.303.0-886421-alpha"]
+                 [secretary "1.1.1"]]
 
   :plugins [[lein-cljsbuild "1.0.3"]]
 

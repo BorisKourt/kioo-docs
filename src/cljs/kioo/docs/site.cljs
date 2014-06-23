@@ -29,4 +29,4 @@
                       :navigation [["home" #(js/alert %)]
                                    ["next" #(js/alert %)]]}))
 
-(om/root init app-state {:target  (. js/document (getElementById "site"))})
+(comment om/root init app-state {:target  (. js/document (getElementById "site"))})
