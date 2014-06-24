@@ -6,6 +6,8 @@
                  [org.clojure/clojurescript "0.0-2234"]
                  [kioo "0.4.1-SNAPSHOT"]
                  [om "0.6.4"]
+                 [markdown-clj "0.9.44"]
+                 [cljs-ajax "0.2.6"]
                  [org.clojure/core.async "0.1.303.0-886421-alpha"]
                  [secretary "1.1.1"]]
 

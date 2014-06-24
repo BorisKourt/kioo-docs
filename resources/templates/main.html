@@ -1,36 +1,44 @@
 
-    <header class="row">
-      <h1>Header placeholder</h1>
-      <ul id="navigation">
-        <li class="nav-item"><a href="#">Placeholder</a></li>
-      </ul>
-    </header>
+<!-- Main Navigation is added via 'Before' --> 
 
-    <div class="row">
-	  <div class="col-md-1">.col-md-1</div>
-	  <div class="col-md-1">.col-md-1</div>
-	  <div class="col-md-1">.col-md-1</div>
-	  <div class="col-md-1">.col-md-1</div>
-	  <div class="col-md-1">.col-md-1</div>
-	  <div class="col-md-1">.col-md-1</div>
-	  <div class="col-md-1">.col-md-1</div>
-	  <div class="col-md-1">.col-md-1</div>
-	  <div class="col-md-1">.col-md-1</div>
-	  <div class="col-md-1">.col-md-1</div>
-	  <div class="col-md-1">.col-md-1</div>
-	  <div class="col-md-1">.col-md-1</div>
+<div id="kioo__greeting" class="container">
+	<div id="kioo__introduction" class="row">
+		<div class="col-md-4">
+			<div class="well">
+				<div class="media">
+					<a class="pull-left" href="#">
+						<img class="media-object" src="resources/images/svg/folder.svg" alt="kioo documentation">
+					</a>
+					<div class="media-body">
+						<h4 class="media-heading">Welcome!</h4>
+						<p>Here you will find examples and documentation for Kioo, a <a href="http://facebook.github.io/react/">React</a> templating library for <a href="https://github.com/clojure/clojurescript">ClojureScript</a>.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-4">
+			<h2 class="">Getting Started</h2>
+			<p>To get started include <code>[kioo "0.4.0"]</code> in your <a href="http://leiningen.org/">leiningen</a> project file then follow along here for the bare minimum setup: </p>
+			<p><a class="btn btn-default" href="#!/doc/starting-with-om" role="button">With OM &raquo;</a> &nbsp; or &nbsp; <a class="btn btn-default" href="#!/doc/starting-with-reagent" role="button">With Reagent &raquo;</a></p>
+		</div>
+		<div class="col-md-4">
+			<h2 class="">Source</h2>
+			<p>Kioo is hosted on Github, we welcome community contributions and patches. As well as any bug reports or feature requests.</p>
+			<p><a class="btn btn-default" href="#" role="button">Github Repository &raquo;</a></p>
+		</div>
 	</div>
-	<div class="row">
-	  <div class="col-md-8">.col-md-8</div>
-	  <div class="col-md-4">.col-md-4</div>
-	</div>
-	<div class="row">
-	  <div class="col-md-4">.col-md-4</div>
-	  <div class="col-md-4">.col-md-4</div>
-	  <div class="col-md-4">.col-md-4</div>
-	</div>
-	<div class="row">
-	  <div class="col-md-6">.col-md-6</div>
-	  <div class="col-md-6">.col-md-6</div>
-	</div>
+</div>
 
+<div id="kioo__decks" class="container">
+	<!-- Doc and Widget 'Decks' will be here -->
+</div>
+
+<div id="kioo__footer" class="container">
+	<hr>
+	<br>
+	<div style="text-align: center;">
+	<p>Report an issue: <a href="https://github.com/ckirkendall/kioo/issues?state=open">on Github</a></p>
+	<p><img width="200px" height="auto" src="https://clojars.org/kioo/latest-version.svg" alt="kioo latest version"></p>
+	<a href="https://twitter.com/crkirkendall"><img src="resources/images/svg/tweet.svg" alt="tweet"></a>
+	</div>
+</div>

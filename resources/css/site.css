@@ -5251,3 +5251,9 @@ button.close {
     display: none !important; } }
 body {
   padding: 80px 0; }
+
+#kioo__greeting {
+  margin-bottom: 1em; }
+  #kioo__greeting .media {
+    margin-top: 0;
+    padding-top: 8px; }
