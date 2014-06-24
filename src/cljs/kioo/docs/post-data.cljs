@@ -18,6 +18,10 @@
                 :tags 	["starting" "reagent"]
                 :excerpt "Kioo also works with Reagent, 
                           here is a bare minimum example application."}
+               {:title  "Fake Post" 
+                :file   "broken-link" 
+                :tags   ["starting" "reagent"]
+                :excerpt "Fake post with a broken link."}
                ]
      ;; Pages for bootstrap widgets
      :widgets [
