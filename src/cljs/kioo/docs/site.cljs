@@ -1,5 +1,5 @@
 (ns kioo.docs.site
-  (:require [kioo.om :refer [content set-attr do-> wrap substitute prepend listen append before after]]
+  (:require [kioo.om :refer [content set-style set-attr do-> html-content wrap substitute prepend listen append before after]]
             [kioo.core :refer [handle-wrapper]]
             [om.core :as om :include-macros true]
             [om.dom :as dom :include-macros true]
@@ -19,9 +19,17 @@
 ;; Loading full text markdown posts:
 ;; -
 
-(defn post-handler [response])
+(defn post-handler 
+  "Processes the markdown file and updates the main atom"
+  [response]
+  (let [markdown (md/mdToHtml response)]
+    (if (empty? response) 
+        (swap! doc-state assoc :current nil)
+        (swap! doc-state assoc :current markdown))))
 
-(defn fetch-error-handler [{:keys [status status-text]} file]
+(defn fetch-error-handler 
+  "Alerts the user with a hopefully helpful error"
+  [{:keys [status status-text]} file]
   (js/alert (str "File not found, if you have a moment tell us that 
                   we couldn't locate: " file)))
 
@@ -38,8 +46,9 @@
 
 ;; --------........________
 ;; Single Post View
-(defsnippet kioo__single "templates/single.html" 
-  [:#kioo__single] [_])
+(defsnippet kioo__single "templates/main.html" 
+  [:.single__content] [current-post]
+  {[:.single__content] (html-content current-post)})
 
 ;; --------........________
 ;; Three pannel intro blurb
@@ -107,7 +116,10 @@
                             (kioo__deck--docs     (:docs data))
                             (kioo__nav--widgets   (:widgets data))
                             (kioo__deck--widgets  (:widgets data)))
-   [:#kioo__footer] (after  (kioo__single         (:current data)))})
+   [:#kioo__single] (do-> (content (kioo__single (:current data)))
+                          (set-style :display (if (:current data)
+                                                  "block"
+                                                  "none")))})
 
 
 ;; -
@@ -131,8 +143,8 @@
 
 ;; --------........________
 ;; #/<*>
-(defroute all "/*" []
-  (prn "Star"))
+(defroute all "*" []
+  (swap! doc-state assoc :current nil))
 
 
 ;; --------........________

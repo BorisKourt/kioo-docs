@@ -31,4 +31,4 @@
                 :excerpt "Nothing to see here, move along!"}
                ]
      ;; Current post, if any
-     :current ""}))
+     :current nil}))
